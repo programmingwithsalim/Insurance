@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} 
+    Enterprise Insurance | Disability Insurance 
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2 style="background-color: #8AA29E; color: white; padding: 10px; width: 100%; text-align: center; margin-bottom: 40px;">Disability Insurance</h2>
+
+        <form method="POST" target="disability_insurance">
+            <input type="text" name="insured_person" placeholder="Insured Person"><br>
+            <input type="number" name="amount" placeholder="Amount"><br>
+            <input type="text" name="period" placeholder="Period"><br>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

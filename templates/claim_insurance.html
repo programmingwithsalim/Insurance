@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block title %}
+    Enterprise Insurance | Claim Insurance
+{% endblock %}
+
+{% block content %}
+    <!-- <div class="container">
+        <h2 class="text-light">No Insurance Available to Claim</h2>
+    </div> -->
+
+    <div class="container" style="width: 100%;">
+        <h2 style="background-color: #8AA29E; color: white; padding: 10px; width: 100%; text-align: center; margin-bottom: 40px;">Claim Your Insurances</h2>
+
+        <ul class="nav nav-tabs" id="insuranceTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="life-tab" data-toggle="tab" href="#life" role="tab" aria-controls="life" aria-selected="true">Life Insurance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="motor-tab" data-toggle="tab" href="#motor" role="tab" aria-controls="motor" aria-selected="false">Motor Insurance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="property-tab" data-toggle="tab" href="#property" role="tab" aria-controls="property" aria-selected="false">Property Insurance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="disability-tab" data-toggle="tab" href="#disability" role="tab" aria-controls="disability" aria-selected="false">Disability Insurance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="health-tab" data-toggle="tab" href="#health" role="tab" aria-controls="health" aria-selected="false">Health Insurance</a>
+            </li>
+        </ul>
+    
+        <div class="tab-content" id="insuranceTabsContent" style="width: 100%; padding-top: 30px;">
+            <div class="tab-pane fade show active" id="life" role="tabpanel" aria-labelledby="life-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Insured Person</th>
+                            <th>Amount</th>
+                            <th>Period (months)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for insurance in life_insurances %}
+                        <tr>
+                            <td>{{ insurance.insured_person }}</td>
+                            <td>{{ insurance.amount }}</td>
+                            <td>{{ insurance.period }}</td>
+                            <td><a href="/claim_life_insurance/{{ insurance.id }}" class="btn btn-primary btn-sm">Claim</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="motor" role="tabpanel" aria-labelledby="motor-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Insured Person</th>
+                            <th>Amount</th>
+                            <th>Period (months)</th>
+                            <th>Policy Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for insurance in motor_insurances %}
+                        <tr>
+                            <td>{{ insurance.insured_person }}</td>
+                            <td>{{ insurance.amount }}</td>
+                            <td>{{ insurance.period }}</td>
+                            <td>{{ insurance.policy_type }}</td>
+                            <td><a href="/claim_motor_insurance/{{ insurance.id }}" class="btn btn-primary btn-sm">Claim</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="property" role="tabpanel" aria-labelledby="property-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Property Item</th>
+                            <th>Amount</th>
+                            <th>Period (months)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for insurance in property_insurances %}
+                        <tr>
+                            <td>{{ insurance.property_item }}</td>
+                            <td>{{ insurance.amount }}</td>
+                            <td>{{ insurance.period }}</td>
+                            <td><a href="/claim_property_insurance/{{ insurance.id }}" class="btn btn-primary btn-sm">Claim</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="disability" role="tabpanel" aria-labelledby="disability-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Insured Person</th>
+                            <th>Amount</th>
+                            <th>Period (months)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for insurance in disability_insurances %}
+                        <tr>
+                            <td>{{ insurance.insured_person }}</td>
+                            <td>{{ insurance.amount }}</td>
+                            <td>{{ insurance.period }}</td>
+                            <td><a href="/claim_disability_insurance/{{ insurance.id }}" class="btn btn-primary btn-sm">Claim</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="health" role="tabpanel" aria-labelledby="health-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Insured Person</th>
+                            <th>Amount</th>
+                            <th>Period (months)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for insurance in health_insurances %}
+                        <tr>
+                            <td>{{ insurance.insured_person }}</td>
+                            <td>{{ insurance.amount }}</td>
+                            <td>{{ insurance.period }}</td>
+                            <td><a href="/claim_health_insurance/{{ insurance.id }}" class="btn btn-primary btn-sm">Claim</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %} Enterprise Insurance | My Profile < {% endblock %}
+
+{% block content %}
+    <div class="container" style="margin-top: 50px; width: 100%;">
+        <h2 style="background-color: #8AA29E; color: white; padding: 10px; width: 100%; text-align: center;">Account Information</h2>
+        <img src="../static/images/profile.png" alt="" width="200" style="margin: 30px;">
+        <form>
+            <p>Personal Information</p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}" placeholder="First Name" disabled>
+                </div>
+                <div class="col">
+                    <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}" placeholder="Last Name" disabled>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="occupation" name="occupation" value="{{ user.occupation }}" placeholder="Occupation" disabled>
+                </div>
+                <div class="col">
+                    <input type="date" id="dob" name="dob" value="{{ user.dob }}" placeholder="Date of Birth" disabled>
+                    <small for="dob" class="text-white">Date of Birth</small>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="email" name="email" value="{{ user.email }}" placeholder="Email Address" disabled>
+                </div>
+            </div>
+            <br>
+            <p>Next of Kin Information</p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="kin_name" name="kin_name" value="{{ user.next_of_kin_name }}" placeholder="Next of Kin Name" disabled>
+                </div>
+                <div class="col">
+                    <input type="text" id="kin_relation" name="kin_relation" value="{{ user.next_of_kin_relation }}" placeholder="Relation" disabled>
+                </div>
+                <div class="col">
+                    <input type="text" id="kin_phone" name="kin_phone" value="{{ user.next_of_kin_phone }}" placeholder="Next of Kin Phone" disabled>
+                </div>
+            </div>
+            <br>
+            <p>Login Information</p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="username" name="username" value="{{ user.username }}" placeholder="Username" disabled>
+                </div>
+                <div class="col">
+                    <input type="password" id="password" name="password" value="{{ user.password }}" placeholder="Password" disabled>
+                </div>
+            </div>
+        </form> 
+    </div>
+{% endblock %}

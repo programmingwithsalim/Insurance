@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} 
+    Enterprise Insurance | Motor Insurance 
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h2 style="background-color: #8AA29E; color: white; padding: 10px; width: 100%; text-align: center; margin-bottom: 40px;">Motor Insurance</h2>
+
+        <form method="POST" target="motor_insurance">
+            <input type="text" name="insured_person" placeholder="Insured Person"><br>
+            <input type="number" name="amount" placeholder="Amount"><br>
+            <input type="text" name="period" placeholder="Period"><br>
+            <select name="policy_type">
+                <option selected>Select Polity Type</option>
+                <option value="first-party">First-Party</option>
+                <option value="second-party">Second-Party</option>
+                <option value="third-party">Third-Party</option>
+            </select><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

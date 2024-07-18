@@ -1,0 +1,236 @@
+{% extends "base.html" %} {% block title %} Enterprise Insurance | Dashboard {%
+endblock %} {% block content %}
+<div class="container" style="flex-direction: column; padding: 20px; width: 100%;">
+  <div class="heading">
+    <h1 class="text-white">Welcome to Enterprise Insurance</h1>
+    <p class="text-white">Your trusted partner in insurance.</p>
+  </div>
+  <div class="accordion" id="accordionExample" style="width: 100%;">
+    <p class="text-white">Checkout information about our insurance policies</p>
+    <!-- Life Insurance -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingLife">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseLife"
+          aria-expanded="true"
+          aria-controls="collapseLife"
+        >
+          Life Insurance
+        </button>
+      </h2>
+      <div
+        id="collapseLife"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingLife"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <strong>Life Insurance</strong>
+          <br /><br />
+
+          <strong>Description</strong>
+          <p>
+            Provides financial protection to the beneficiaries of the
+            policyholder in the event of their death.
+          </p>
+
+          <strong>Options</strong>
+          <ul>
+            <li>Select who to insure.</li>
+            <li>Choose the amount to secure every month (50gh to 200gh).</li>
+            <li>Select the period for the insurance.</li>
+            <li>Receive the specified amount once the policy is due.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Motor Insurance -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingMotor">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseMotor"
+          aria-expanded="false"
+          aria-controls="collapseMotor"
+        >
+          Motor Insurance
+        </button>
+      </h2>
+      <div
+        id="collapseMotor"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingMotor"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <strong>Life Motor Insurance</strong>
+          <br /><br />
+
+          <strong>Description</strong>
+          <p>Covers damages or losses related to the insured vehicle.</p>
+
+          <strong>Options</strong>
+          <p>
+            Three types of policies: First-Party, Second-Party, and Third-Party
+            insurance.
+          </p>
+          <ul>
+            <li>
+              <strong>First-Party Insurance:</strong> Covers the person insuring
+              their own motor vehicle.
+            </li>
+            <li>
+              <strong>Second-Party Insurance:</strong> Covers the person
+              involved in an accident with the insured.
+            </li>
+            <li>
+              <strong>Third-Party Insurance:</strong> Covers the damage or
+              injury to third-party property or individuals.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Insurance -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingProperty">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseProperty"
+          aria-expanded="false"
+          aria-controls="collapseProperty"
+        >
+          Property Insurance
+        </button>
+      </h2>
+      <div
+        id="collapseProperty"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingProperty"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <strong>Property Insurance</strong>
+          <br /><br />
+
+          <strong>Description</strong>
+          <p>
+            Protects against risks to property, such as fire, theft, and some
+            weather damage.
+          </p>
+
+          <strong>Options</strong>
+          <ul>
+            <li>Select what to insure.</li>
+            <li>Choose the amount to secure every month (50gh to 200gh).</li>
+            <li>Select the period for the insurance.</li>
+            <li>Receive the specified amount once the policy is due.</li>
+            <li>
+              Third-party liability cover for injury or damage to third-party
+              property.
+            </li>
+            <li>
+              Coverage for damage caused by water or oil escape, outbuildings,
+              swimming pools, fences, etc.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disability Insurance -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingDisability">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseDisability"
+          aria-expanded="false"
+          aria-controls="collapseDisability"
+        >
+          Disability Insurance
+        </button>
+      </h2>
+      <div
+        id="collapseDisability"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingDisability"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <strong>Disability Insurance</strong>
+          <br /><br />
+
+          <strong>Description</strong>
+          <p>
+            Provides income in the event the policyholder is unable to work due
+            to disability.
+          </p>
+
+          <strong>Options</strong>
+          <ul>
+            <li>Select who to insure (self or others).</li>
+            <li>Choose the amount to secure every month (50gh to 200gh).</li>
+            <li>Select the period for the insurance.</li>
+            <li>Receive the specified amount once the policy is due.</li>
+            <li>
+              Includes Short-Term Disability (STD) and Long-Term Disability
+              (LTD).
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Insurance -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingHealth">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseHealth"
+          aria-expanded="false"
+          aria-controls="collapseHealth"
+        >
+          Health Insurance
+        </button>
+      </h2>
+      <div
+        id="collapseHealth"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingHealth"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <strong>Health Insurance</strong>
+          <br /><br />
+
+          <strong>Description</strong>
+          <p>Covers medical expenses in exchange for a monthly premium.</p>
+
+          <strong>Options</strong>
+          <ul>
+            <li>Select who to insure (self or others).</li>
+            <li>Choose the amount to secure every month (50gh to 200gh).</li>
+            <li>Select the period for the insurance.</li>
+            <li>Receive the specified amount once the policy is due.</li>
+            <li>Covers medical expenses in exchange for a monthly premium.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

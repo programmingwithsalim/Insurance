@@ -1,0 +1,63 @@
+{% extends "auth_base.html" %}
+
+{% block title %} Enterprise Insurance | Sign Up < {% endblock %}
+{% block content %}
+    <div class="container" style="flex-direction: row; margin-top: 0px;">
+        <img src="../static/images/insurance_logo.png" alt="" width="400">
+        <form action='/register' method="POST">
+            <h2 style="background-color: #8AA29E; color: white;padding: 10px;">Create Account <i class="material-icons">person_add</i></h2>
+
+
+            <br>
+            <p>Personal Information</p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="first_name" name='first_name' placeholder="First Name" required>
+                </div>
+                <div class="col">
+                    <input type="text" id="last_name" name='last_name' placeholder="Last Name" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <input type="occupation" id="occupation" name='occupation' placeholder="Occupation" required>
+                </div>
+                <div class="col">
+                    <input type="date" id="dob" name='dob' placeholder="Date of Birth" required>
+                    <small for="dob" class="text-white">Date of Birth</small>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="email" name='email' placeholder="Email Address" required>
+                </div>
+            </div>
+
+            <p>Next of Kind Information</p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" name='kin_name' placeholder="Next of Kin Name" required>
+                </div>
+                <div class="col">
+                    <input type="text" name='kin_relation' placeholder="Relation" required>
+                </div>
+                <div class="col">
+                    <input type="number" name='kin_phone' placeholder="Next of Kin Phone" required>
+                </div>
+            </div>
+
+            <p>Login Information</p>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="username" name='username' placeholder="Username" required>
+                </div>
+                <div class="col">
+                    <input type="password" id="password" name='password' placeholder="Password" required>
+                </div>
+            </div>
+            <br>
+            <button type='submit' class='btn btn-dark'>Submit</button>
+            <br>
+            <a href="/" style="margin-top: 10px; color: #fff; text-align: center;">Login</a>
+        </form>
+    </div>
+{% endblock %}
